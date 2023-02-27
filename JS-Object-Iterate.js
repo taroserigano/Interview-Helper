@@ -62,7 +62,7 @@ const car = {
 const entries = Object.entries(car)
 
 // ["make", "Honda"], ["model", "Civic"], ["year", 2022]
-for (let i = 0; i < entries.length; i++) {
+for (let i in entries) {
     console.log(entries[i])
     for(const j in entries[i])
     console.log(entries[j][0])
