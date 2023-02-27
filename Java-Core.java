@@ -1,3 +1,19 @@
+
+
+JIT Compiler 
+
+
+1. Java Source Code-> JDK (compiler) 
+
+-JDK turns source code into Byte Codes 
+
+2. JDK --> JRE (interpreter + JIT Compiler) 
+
+-converts byte code into machine code 
+-interpreter reads code line by line; but slow  
+-JIT Compiler converts byte code into machine code Fast! 
+
+
 18. Interface vs Abstract 
 
 Interface:
