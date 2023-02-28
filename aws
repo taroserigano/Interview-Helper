@@ -1,0 +1,45 @@
+EC2
+
+-is a virtual machine, identical to on-premise server.
+-you have a full control, like you can change virtual hardware
+
+
+SnowBall 
+
+-lets you transfer terabytes of data onto AWS 
+
+
+
+VPC
+
+-Virtual PRivate Cloud - allows you to customize your networking configuration like AP address, internet gateways, subnets, and security groups 
+
+
+S3
+
+Amazon S3 Standard
+Amazon S3 Standard-Infrequent Access
+Amazon S3 Reduced Redundancy Storage
+Amazon Glacier
+
+
+Route 53 
+
+-Globally distributed servers - has DNS servers all around the world. Any of the world has access to the local DNS nearest to them. 
+-Optimization - Route 53 stores cache in the data centers all around the world. Users can access the cache that are stored in their nearest data center locations. 
+
+
+Availability Region - collection of data centers AZs 
+Availability Zone - Data center 
+
+
+
+
+
+
+
+
+
+
+
+
