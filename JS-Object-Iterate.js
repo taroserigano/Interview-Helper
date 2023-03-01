@@ -2,25 +2,33 @@ const toyCompany = {
     redTeam: {
         production: {
             'redProdManager': ['Dan', "Taro", "Jane"],
-
-
         },
         sales: {
             'redSalesManager': ['Linda', "Jeff","Ken"],
-
         }
     },
     blueTeam: {
         production: {
             'blueProdManager': ['Stacy', "Stacy"],
-
         }
-
     }
 };
 
 map = {} 
 
+for (const teams in toyCompany){
+    const team = toyCompany[teams]
+    for (const titles in team){
+        const people = team[titles]
+        for ( const person in people){
+            const names = people[person]
+            for(let name of names){
+                console.log(name)
+            }
+        }
+        
+    }
+}
 
 
 for (const teams in toyCompany){
