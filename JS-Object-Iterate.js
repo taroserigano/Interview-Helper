@@ -14,6 +14,28 @@ const toyCompany = {
     }
 };
 
+for(let team of Object.values(toyCompany)){ 
+    for(let dpt of Object.values(team)){
+        // console.log(dpt)
+        for(let mgr of Object.values(dpt)){
+            // console.log(mgr)
+            for(let name of Object.values(mgr)){
+                console.log(name)
+            }
+        }
+        
+    }
+}
+
+
+const { a, ...others } = { a: 1, b: 2, c: 3 };
+console.log(a); // { b: 2, c: 3 }
+
+const [first, ...others2] = [1, 2, 3];
+console.log(others2); // [2, 3]
+
+Expected output: 2
+
 map = {} 
 
 for (const teams in toyCompany){
