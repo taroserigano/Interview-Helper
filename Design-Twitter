@@ -1,0 +1,128 @@
+-----DESIGN TWITER----- 
+
+500m users
+200m active users 
+20m active writers 
+
+Tweets- 
+
+each Tweet read - 1kb ~ 10Mb -> avg. 1 mb
+characters & meta data & video/img 
+
+ 
+READ: 200m users * 100 tweets = 20b tweets read 
+20b * 1mb = 20PB/day  
+
+WRITE
+text: 20million * 1kb  = 20GB / day 
+media: 20 million * 1mb = 20 tb / day 
+
+Size: 1bb~10mb 
+
+
+FUNCTIONS:  
+createTweet - [Text, media, timestamp] 
+getFeed(UID) 
+follow(UID) - followed and following 
+
+
+DB: 
+
+indexes - following users 
+
+Read-only Replicas 
+
+Sharding key - based on User ID, instead of Tweet ID 
+request specific ID's tweets 
+
+
+
+create Tweet scenario: 
+
+1. User creates a tweet, server creates in DB 
+2. Based on the UID, DB stores the tweet on the shard (UID-based), media on S3 
+
+Read Tweets
+
+1. we may have to go through multiple shards for different users' tweets
+2. Caching helps as well as LRU with timestamps 
+
+
+
+Performance Boost (ASYNC) for new tweets 
+
+-whenever user creates a new tweet, 
+pub/sub queue - update followee's tweet list on followers 
+
+-> Spark Cluster -> new Tweets Cache 
+
+*probably caching can supplement's new Tweets Cache simultaneously 
+
+
+---------------------------------------------------
+
+
+
+Functions 
+-Create Tweet 
+-Timeline - through Datetime - LRU Cache 
+- 
+
+
+
+
+Non-Functions Features 
+-Authorization 
+-Latency
+-Highly Availability / Fault Torelance
+-Security 
+-Caching 
+-Sharding 
+
+
+
+
+
+Dynamo DB 
+-copy data in multiple AZ 
+-highly available
+-super fast response
+-scale massively 
+-pay as you go 
+
+*Performance
+-Read Replicas 
+-Dynamo DB Accelerator (DAX) 
+
+
+KMS - 
+
+0. use the customer master key 
+1. provides Custome Master Key. 
+2. data will be encrypted into ciphertext with encryption algorithm
+3. this generates encrypted data key and plaintext data key. plaintext data key will be dismissed 
+*plaindata text key can decrypt the ciphertext 
+
+-When Decrypt 
+
+1. use the customer master key again 
+2. decrypt the encrypted data key with decryption algo.
+3. this turns encrypted into plaintext data key
+4. use this to decrypt the cypher text 
+
+
+Also, KSM is integrated with Cloud Trail, all API calls get recorded 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
