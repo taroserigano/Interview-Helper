@@ -24,3 +24,52 @@ AWS WAF - Web Application Firewall
 set the limit between 100 - 50 million times per 5 mins, can detect and specify the IP address each time 
 
 
+\
+
+
+
+
+
+Tweets - /api/version/tweets 
+         /api/version/:id/tweets
+         /api/v/following/tweets 
+
+        GET a list of tweets, 
+        GET a list of specific user's tweets 
+        GET a list of following tweets 
+
+                /api/v/tweets 
+
+        POST [text, media/timeline] 
+
+Top Page - api/v/home 
+
+        GET a list of general tweets 
+        
+Users 
+        - api/v/users/:id/img   - GET - you can see the pic of the user 
+        - api/v/users/:id/img   - POST - you can upload a new image  
+        - api/v/users/:id       - POST - follow the user 
+
+Trend 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
