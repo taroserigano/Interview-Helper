@@ -58,6 +58,62 @@ HTTPS for security over the network
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+ NEET
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+User 1 Billion 
+Watch 1B * 5 times = 5 Billions 
+Uploaders: 1 billion % 5 = 50 millions 
+
+ 
+ENCODING WORKERS 
+
+Workers for Encoding - 1 min for each video 
+
+50 millions / 100000seconds = 500 videos per second upload 
+
+
+each min 500 video uploaded 
+each worker takes 1 min for encoding 
+
+30k workers needed = 500 videos * 60 sec 
+
+
+
+
+
+WATCHING SIDE 
+
+streaming - small chunks 
+
+
+
+RATE LIMIT (for upload) 
+
+
+
+mySQL 
+
+-started 2005 
+-scale needed  
+-added sharding and read replicas - shards got too complicated 
+
+ 
+VITESS
+
+middle ware engine between application - DB 
+
+scale up the SQL, 
+highly Available - replicas 
+
+
+
+Vitess was created in 2010 to solve the MySQL scalability challenges that the team at YouTube faced. This section briefly summarizes the sequence of events that led to Vitess' creation: YouTube's MySQL database reached a point when peak traffic would soon exceed the database's serving capacity.
 
 
 
