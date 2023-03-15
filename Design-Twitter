@@ -6,18 +6,24 @@
 
 Tweets- 
 
-each Tweet read - 1kb ~ 10Mb -> avg. 1 mb
 characters & meta data & video/img 
 
- 
-READ: 200m users * 100 tweets = 20b tweets read 
-20b * 1mb = 20PB/day  
 
 WRITE
-text: 20million * 1kb  = 20GB / day 
-media: 20 million * 1mb = 20 tb / day 
 
-Size: 1bb~10mb 
+-each Tweet: 100 bytes / avg 1 mb 
+
+text: 20 million * 1kb  = 20 GB / day 
+text&media: 20 million * 1mb = 20 tb / day 
+
+
+
+
+ 
+READ: 
+-Times: 200m users read * 100 tweets = 20 billion tweets read (tweets read)  
+-Data Used: text-only: 20 billions * 1 byte = 200 GB 
+            text&media: 20b * 1mb = 20PB/day  
 
 
 FUNCTIONS:  
