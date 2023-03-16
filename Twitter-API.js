@@ -30,8 +30,8 @@ set the limit between 100 - 50 million times per 5 mins, can detect and specify 
 
 
 
-Tweets - /api/version/tweets 
-         /api/version/:id/tweets
+Tweets - /api/v/tweets 
+         /api/v/:id/tweets
          /api/v/following/tweets 
 
         GET a list of tweets, 
